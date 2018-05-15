@@ -29,7 +29,11 @@ public class class_Mouvement {
 	public Transform[] rayOrig;
 	public float mouseSpeed = 5;
 	public float playerSpeed = 1;
-	public float jumpForce = 10;
+
+	public float jumpForce = 175;
+	public float jumpForceInitial = 175;
+	public float jumpForceMax = 350;
+	public float jumpForceAdding = 1;
 	float gravityforce = -10;
 	public float cameraChangeTime = 0.2f;
 	public float cameraChangeStep = 10;
@@ -70,8 +74,7 @@ public class class_Mouvement {
 		}
 
 	}
-
-
+		
 
 	public void PlayerOrientationUpdate(Direction dir){
 		Quaternion tempQua = Quaternion.Euler (0,0,0);
@@ -89,6 +92,18 @@ public class class_Mouvement {
 		}
 			
 		transform.rotation = tempQua;
+	}
+
+	public void AugmentationJump (){
+
+		if (jumpForce < jumpForceMax){
+			jumpForce += jumpForceAdding;
+		}
+		
+	}
+
+	public void resetJump (){
+		jumpForce = jumpForceInitial;  
 	}
 
 	bool DetectGround(Transform boxOrig){

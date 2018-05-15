@@ -17,6 +17,18 @@ public class static_Input {
 		}
 		return false;
 	}
+	static public bool AllFire2KeyUp () 
+	{
+		if (Input.GetAxis ("Fire2") <= 0 && isFire2Enter == true) {
+			isFire2Enter = false;
+			return true;
+		} 
+		if (Input.GetAxis ("Fire2") > 0) {
+				isFire2Enter = true;
+			return false;
+		}                                                  
+		return false;
+	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 	static bool isFire1Enter;
 	static public bool AllFire1KeyDown () 
