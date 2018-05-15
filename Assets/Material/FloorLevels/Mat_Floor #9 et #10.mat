@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 'Mat_Floor #1 et #2'
+  m_Name: 'Mat_Floor #9 et #10'
   m_Shader: {fileID: 4800000, guid: a7c4bb97e9004bc4dab070c3ed408b14, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 1
@@ -73,7 +73,7 @@ Material:
     - _ZWrite: 0
     - __dirty: 1
     m_Colors:
-    - _Bottom_Color: {r: 0.40900004, g: 0.08462069, b: 0, a: 0}
+    - _Bottom_Color: {r: 0.71323526, g: 0.16782005, b: 0.69818944, a: 0}
     - _Color: {r: 0.27891442, g: 0.6397059, b: 0.24929716, a: 1}
     - _Diffuse_keep_black_for_no_influence: {r: 0, g: 0, b: 0, a: 0}
     - _DoNotTouch_BOTTOM: {r: 0, g: 0, b: 0, a: 0}
@@ -81,6 +81,6 @@ Material:
     - _DoNotTouch_RIGHT: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0.6838235, g: 0.115646616, b: 0.115646616, a: 1}
     - _Emissive_Top: {r: 0.88235295, g: 0.4606849, b: 0.07785469, a: 0}
-    - _Left_Color: {r: 0.83137256, g: 0.41938615, b: 0.10331966, a: 0}
-    - _Right_Color: {r: 1, g: 0.4758621, b: 0, a: 0}
-    - _Top_Color: {r: 0.8308824, g: 0.2736603, b: 0.12829803, a: 0}
+    - _Left_Color: {r: 0.86983216, g: 0.19415009, b: 0.97794116, a: 0}
+    - _Right_Color: {r: 1, g: 0.42647058, b: 0.7231238, a: 0}
+    - _Top_Color: {r: 0.99264705, g: 0.2116674, b: 0.93878645, a: 0}
