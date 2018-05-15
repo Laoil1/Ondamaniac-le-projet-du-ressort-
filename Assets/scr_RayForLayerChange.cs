@@ -22,7 +22,7 @@ public class scr_RayForLayerChange : MonoBehaviour {
 		Debug.DrawRay (myRayDown.origin,myRayDown.direction*myRayLenght,Color.magenta);
 		Debug.DrawRay (myRayUp.origin,myRayUp.direction*myRayLenght,Color.magenta);
         if (Physics.Raycast (myRayUp, out hitUp, myRayLenght, toRenderLayer)){
-			MultRayCastUp ();
+            MultRayCastUp();
 		}
 		if (Physics.Raycast (myRayDown, out hitUp, myRayLenght, toRenderLayer)){
 			MultRayCastDown ();
@@ -33,32 +33,32 @@ public class scr_RayForLayerChange : MonoBehaviour {
 	}
 
 	void MultRayCastUp(){
-			/*while (NumberOfObject < 2){
-			if(Physics.Raycast (hit.transform.position,myRay.direction, out hit, myRayLenght, toRenderLayer)){
-				Debug.DrawRay (hit.transform.position,myRay.direction*myRayLenght,Color.red);
-				switch (NumberOfObject)
-				{
-				case 0:
-					if (hit.transform.gameObject.layer == 9){
-						hit.transform.gameObject.layer = 8;
-					}
-					if(hit.transform.gameObject.layer == 11){
-						NumberOfObject = 1;
-					}
-					break;
-				case 1:
-					if (hit.transform.gameObject.layer == 9){
-						hit.transform.gameObject.layer = 8;
-					}
-					break;
-				}
-			}else{
-				NumberOfObject = 2;
-			}
-			print (hit.transform.gameObject.name);
-		}
-		NumberOfObject = 0;*/
-		/*if (isplayerToutched){
+        /*while (NumberOfObject < 2){
+        if(Physics.Raycast (hit.transform.position,myRay.direction, out hit, myRayLenght, toRenderLayer)){
+            Debug.DrawRay (hit.transform.position,myRay.direction*myRayLenght,Color.red);
+            switch (NumberOfObject)
+            {
+            case 0:
+                if (hit.transform.gameObject.layer == 9){
+                    hit.transform.gameObject.layer = 8;
+                }
+                if(hit.transform.gameObject.layer == 11){
+                    NumberOfObject = 1;
+                }
+                break;
+            case 1:
+                if (hit.transform.gameObject.layer == 9){
+                    hit.transform.gameObject.layer = 8;
+                }
+                break;
+            }
+        }else{
+            NumberOfObject = 2;
+        }
+        print (hit.transform.gameObject.name);
+    }
+    NumberOfObject = 0;*/
+        /*if (isplayerToutched){
 				hitUp.transform.gameObject.layer = 8;
 		}else{
 				hitUp.transform.gameObject.layer = 9;
@@ -72,15 +72,16 @@ public class scr_RayForLayerChange : MonoBehaviour {
 		if(Physics.Raycast (hitUp.transform.position,myRayUp.direction, out hitUp, myRayLenght,toRenderLayer)){
 			MultRayCast ();
 		}*/
-		hitUp.transform.gameObject.layer = 9;
+        //Debug.Log(hitUp.transform.parent.name);
+		hitUp.transform.parent.gameObject.layer = 9;
 		if (Physics.Raycast (hitUp.transform.position,myRayUp.direction, out hitUp, myRayLenght,toRenderLayer)){
 			MultRayCastUp ();
 		}
 	}
 
 	void MultRayCastDown(){
-		hitUp.transform.gameObject.layer = 8;
-		if (Physics.Raycast (hitUp.transform.position,myRayDown.direction, out hitUp, myRayLenght,toRenderLayer)){
+        hitUp.transform.parent.gameObject.layer = 8;
+        if (Physics.Raycast (hitUp.transform.position,myRayDown.direction, out hitUp, myRayLenght,toRenderLayer)){
 			MultRayCastDown ();
 			}
 	}
