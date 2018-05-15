@@ -14,8 +14,11 @@ public class class_Mouvement {
 	[HideInInspector] 
 	public bool isOnTheGround;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public Transform camTransform;
+	public Transform camTransform2;
+	public Transform camTransform3;
+    
 
 	[HideInInspector]
 	public Transform transform;
@@ -113,8 +116,13 @@ public class class_Mouvement {
 	}
 
 	public IEnumerator OrientionChange (){
-		Vector3 currentRotation = camTransform.eulerAngles; 
-		float targetRot = -90;
+		Vector3 currentRotation = camTransform.eulerAngles;
+		Vector3 currentRotation2 = camTransform2.eulerAngles;
+		Vector3 currentRotation3 = camTransform3.eulerAngles;
+            
+
+
+        float targetRot = -90;
 		int decal;
 
 		if (currentRotation.x<90){
@@ -127,7 +135,10 @@ public class class_Mouvement {
 
 		for (int i = 0; i < cameraChangeStep; i++) {
 			camTransform.Rotate (targetRot/cameraChangeStep,0,0);
-			yield return new WaitForSeconds (cameraChangeTime/cameraChangeStep);
+			camTransform2.Rotate (targetRot / cameraChangeStep, 0, 0);
+			camTransform3.Rotate(targetRot / cameraChangeStep, 0, 0);
+            
+            yield return new WaitForSeconds (cameraChangeTime/cameraChangeStep);
 		}
 
 
