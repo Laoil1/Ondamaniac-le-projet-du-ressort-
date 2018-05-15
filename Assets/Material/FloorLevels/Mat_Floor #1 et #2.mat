@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Ground_Mat
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_Name: 'Mat_Floor #1 et #2'
+  m_Shader: {fileID: 4800000, guid: a7c4bb97e9004bc4dab070c3ed408b14, type: 3}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -58,19 +58,29 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
+    - __dirty: 1
     m_Colors:
+    - _Bottom_Color: {r: 0.40900004, g: 0.08462069, b: 0, a: 0}
     - _Color: {r: 0.27891442, g: 0.6397059, b: 0.24929716, a: 1}
-    - _EmissionColor: {r: 0.22928189, g: 0.115646616, b: 0.6838235, a: 1}
+    - _Diffuse_keep_black_for_no_influence: {r: 0, g: 0, b: 0, a: 0}
+    - _DoNotTouch_BOTTOM: {r: 0, g: 0, b: 0, a: 0}
+    - _DoNotTouch_LEFT: {r: 0, g: 0, b: 0, a: 0}
+    - _DoNotTouch_RIGHT: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0.6838235, g: 0.115646616, b: 0.115646616, a: 1}
+    - _Emissive_Top: {r: 0.88235295, g: 0.4606849, b: 0.07785469, a: 0}
+    - _Left_Color: {r: 0.83137256, g: 0.41938615, b: 0.10331966, a: 0}
+    - _Right_Color: {r: 1, g: 0.4758621, b: 0, a: 0}
+    - _Top_Color: {r: 0.8308824, g: 0.2736603, b: 0.12829803, a: 0}

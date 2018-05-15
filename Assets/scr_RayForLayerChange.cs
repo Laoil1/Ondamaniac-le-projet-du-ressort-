@@ -19,8 +19,9 @@ public class scr_RayForLayerChange : MonoBehaviour {
 	void Update () {
 		myRayUp = new Ray (transform.position, -transform.forward);
 		myRayDown = new Ray (transform.position, transform.forward);
+		Debug.DrawRay (myRayDown.origin,myRayDown.direction*myRayLenght,Color.magenta);
 		Debug.DrawRay (myRayUp.origin,myRayUp.direction*myRayLenght,Color.magenta);
-		if (Physics.Raycast (myRayUp, out hitUp, myRayLenght, toRenderLayer)){
+        if (Physics.Raycast (myRayUp, out hitUp, myRayLenght, toRenderLayer)){
 			MultRayCastUp ();
 		}
 		if (Physics.Raycast (myRayDown, out hitUp, myRayLenght, toRenderLayer)){
