@@ -1213,7 +1213,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -15
+  near clip plane: -20.1
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -1589,7 +1589,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 451647069}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pivot Point North
   m_TagString: Player
   m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
@@ -1607,7 +1607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1754723518}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &476606248
 Prefab:
@@ -3772,7 +3772,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 905802761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321577684}
@@ -6101,7 +6101,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397398703}
   m_LocalRotation: {x: 0.36617678, y: 0.35134196, z: -0.15167537, w: 0.8482146}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321577684}
@@ -6283,7 +6283,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1459362231}
   m_LocalRotation: {x: 0.36617678, y: 0.35134196, z: -0.15167537, w: 0.8482146}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321577684}
@@ -6305,7 +6305,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -15
+  near clip plane: -12.6
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -6313,7 +6313,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2049
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6409,7 +6409,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1471591563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1.015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321577684}
@@ -6427,6 +6427,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.12, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1502404716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1502404717}
+  - component: {fileID: 1502404718}
+  m_Layer: 2
+  m_Name: RaycasterForCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1502404717
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502404716}
+  m_LocalRotation: {x: 0.36617678, y: 0.35134196, z: -0.15167537, w: 0.8482146}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0, z: 0.7351735}
+  m_Children: []
+  m_Father: {fileID: 1754723518}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1502404718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502404716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43accd0a6dcf5f24a8c29965b23690ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toRenderLayer:
+    serializedVersion: 2
+    m_Bits: 2816
+  cam: {fileID: 287932760}
 --- !u!1001 &1506575734
 Prefab:
   m_ObjectHideFlags: 0
@@ -6623,7 +6667,7 @@ GameObject:
   - component: {fileID: 1566044099}
   - component: {fileID: 1566044102}
   - component: {fileID: 1566044100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Aspect
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6641,7 +6685,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1754723518}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1566044100
 MeshRenderer:
@@ -7312,7 +7356,7 @@ GameObject:
   - component: {fileID: 1754723521}
   - component: {fileID: 1754723520}
   - component: {fileID: 1754723519}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7329,6 +7373,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 5.8999996, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
+  - {fileID: 1502404717}
   - {fileID: 451647069}
   - {fileID: 1566044099}
   m_Father: {fileID: 187356062}
@@ -7358,9 +7403,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move:
     isOnTheGround: 0
-    camTransform: {fileID: 0}
-    camTransform2: {fileID: 0}
-    camTransform3: {fileID: 0}
+    camTransform: {fileID: 1397398704}
+    camTransform2: {fileID: 1459362232}
+    camTransform3: {fileID: 287932760}
     transform: {fileID: 0}
     rgdbd: {fileID: 0}
     rayOrig:
@@ -7369,6 +7414,9 @@ MonoBehaviour:
     mouseSpeed: 5
     playerSpeed: 5
     jumpForce: 175
+    jumpForceInitial: 175
+    jumpForceMax: 350
+    jumpForceAdding: 1
     cameraChangeTime: 0.2
     cameraChangeStep: 10
 --- !u!54 &1754723521
