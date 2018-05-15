@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33170906635367908}
   - component: {fileID: 65425287421138982}
   - component: {fileID: 23568595978533878}
-  - component: {fileID: 65908022612059048}
   m_Layer: 0
   m_Name: CubePlateforme 2x2
   m_TagString: Untagged
@@ -57,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 95555051d9d80004a9f5d1a1aebe2a37, type: 2}
+  - {fileID: 2100000, guid: 085ea816c19bdac46b7d3ef1840fe4c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,15 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65908022612059048
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1733229584282746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5, y: 3.7135487, z: 2.5}
-  m_Center: {x: 0.6873399, y: -1.6432257, z: 0.66648865}
