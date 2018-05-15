@@ -8,6 +8,9 @@ public class class_DeadAndRespawn{
 	public float deadMinY ;
 	public float deadMaxY ; 
 
+	public Transform spawnPoint; 
+
+
 
 
 
