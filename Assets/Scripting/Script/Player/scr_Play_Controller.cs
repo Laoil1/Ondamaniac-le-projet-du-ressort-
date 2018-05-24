@@ -27,6 +27,10 @@ public class scr_Play_Controller : MonoBehaviour {
 
 			//move.UpdateOrientation();
 
+		if (Input.GetAxis ("Fire2")>0){
+			move.AugmentationJump ();
+		}
+
 
 		if (static_Input.AllFire2KeyUp() && move.isOnTheGround == true){
 			move.UpdateJump ();
