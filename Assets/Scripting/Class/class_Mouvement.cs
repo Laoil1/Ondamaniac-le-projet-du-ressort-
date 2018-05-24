@@ -29,7 +29,6 @@ public class class_Mouvement {
 	public Transform[] rayOrig;
 	public float mouseSpeed = 5;
 	public float playerSpeed = 1;
-
 	public float jumpForce = 175;
 	public float jumpForceInitial = 175;
 	public float jumpForceMax = 350;
@@ -79,16 +78,16 @@ public class class_Mouvement {
 	public void PlayerOrientationUpdate(Direction dir){
 		Quaternion tempQua = Quaternion.Euler (0,0,0);
 		if (dir == Direction.Right){
-			tempQua = Quaternion.Euler (-90, 0, 0);
+			tempQua = Quaternion.Euler (-90, transform.eulerAngles.y, 0);
 		}
 		if (dir == Direction.Up){
-			tempQua = Quaternion.Euler (0, 0, 0);
+			tempQua = Quaternion.Euler (0, transform.eulerAngles.y, 0);
 		}
 		if (dir == Direction.Left){
-			tempQua = Quaternion.Euler (90, 0, 0);
+			tempQua = Quaternion.Euler (90, transform.eulerAngles.y, 0);
 		}
 		if (dir == Direction.Down){
-			tempQua = Quaternion.Euler (180, 0, 0);
+			tempQua = Quaternion.Euler (180, transform.eulerAngles.y , 0);
 		}
 			
 		transform.rotation = tempQua;
@@ -121,7 +120,7 @@ public class class_Mouvement {
 
 	public IEnumerator Jump (){
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 10; i++) {
 			rgdbd.AddForce (transform.up*jumpForce,ForceMode.Impulse);
 			//transform.position += transform.up; 
 			yield return new WaitForSeconds (Time.deltaTime);
