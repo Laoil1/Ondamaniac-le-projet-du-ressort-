@@ -17,6 +17,8 @@ public class scr_RayForLayerChange : MonoBehaviour {
 	void Start (){
 	}
 	void Update () {
+
+
 		myRayUp = new Ray (transform.position, -transform.forward);
 		myRayDown = new Ray (transform.position, transform.forward);
 		Debug.DrawRay (myRayDown.origin,myRayDown.direction*myRayLenght,Color.magenta);
@@ -27,6 +29,13 @@ public class scr_RayForLayerChange : MonoBehaviour {
 		if (Physics.Raycast (myRayDown, out hitUp, myRayLenght, toRenderLayer)){
 			MultRayCastDown ();
 		}
+
+		/*if (OBup Physics.OverlapBox (myRayUp.origin)){
+			MultRayCastUp ();
+		}
+		if (Physics.Raycast (myRayDown, out hitUp, myRayLenght, toRenderLayer)){
+			MultRayCastDown ();
+		}*/
 
 		transform.rotation = cam.rotation;
 
